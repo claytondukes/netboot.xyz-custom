@@ -30,7 +30,7 @@ set proxmox_version 7.1-2
 imgfree
 kernel ${kernel_url}vmlinuz vga=normal video=vesafb:ywrap,mtrr ramdisk_size=16777216 rw quiet ${params} initrd=initrd.magic console=tty0 console=ttyS0,115200n8  nomodeset nofb modprobe.blacklist=megaraid_sas,mpt3sas,nvidiafb ${cmdline}
 initrd ${kernel_url}initrd
-initrd ${kernel_url}/asset-mirror/releases/download/7.1-2-a42c4ce8/proxmox.iso /proxmox.iso
+initrd http://192.168.28.7/asset-mirror/releases/download/7.1-2-a42c4ce8/proxmox.iso /proxmox.iso
 boot
 
 :proxmox_exit
