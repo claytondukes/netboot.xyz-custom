@@ -67,7 +67,7 @@ goto deb_boot
 
 :deb_boot
 imgfree
-kernel ${debian_mirror}/${dir}/linux ${install_params} ${netcfg} ${mirrorcfg} initrd=initrd.magic ${cmdline}
+kernel ${debian_mirror}/${dir}/linux ${install_params} ${netcfg} ${mirrorcfg} initrd=initrd.magic console=ttyS0,115200n8 modprobe.blacklist=megaraid_sas,mpt3sas,nvidiafb ${cmdline}
 initrd ${debian_mirror}/${dir}/initrd.gz
 echo
 echo MD5sums:
